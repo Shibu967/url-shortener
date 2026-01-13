@@ -20,5 +20,23 @@ class DatabaseSeeder extends Seeder
             'SuperAdmin',
             null,
         ]);
+
+
+
+
+     DB::statement("
+    INSERT INTO companies (name, created_at, updated_at) 
+    VALUES (?, NOW(), NOW()), 
+           (?, NOW(), NOW()), 
+           (?, NOW(), NOW()), 
+           (?, NOW(), NOW()), 
+           (?, NOW(), NOW())
+", [
+            'TechCorp India',
+            'Digital Solutions Ltd',
+            'Innovatech Systems',
+            'NextGen Software',
+            'Alpha Digital'
+        ]);
     }
 }
